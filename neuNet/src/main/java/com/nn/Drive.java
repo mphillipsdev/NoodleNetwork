@@ -23,9 +23,9 @@ public class Drive
     public static void main(String[] args) {
         long start = System.nanoTime();
         t.setDirectionals();
-        for(int i = 0; i < 1000000; i ++)
+        for(int i = 0; i < 10000000; i ++)
             tankTurn(i);
-        System.out.println((System.nanoTime() - start) / 1000000000.0);
+        System.out.println((System.nanoTime() - start) / 1000000000.0 + " seconds.");
     }
 
     public static void number()

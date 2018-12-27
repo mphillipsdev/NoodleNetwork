@@ -13,7 +13,7 @@ public class Neuron
     List<Double> weights = new ArrayList<>();
 
     // Node-specific variables
-    double bias = 1.0;
+    double bias = 0.3;
     double threshold = 0.5;
     double output = 0.0;
 
@@ -31,6 +31,11 @@ public class Neuron
     public void setOutput(double output)
     {
         this.output = output;
+    }
+
+    public double getInput(int i)
+    {
+        return this.inputs.get(i);
     }
 
     // Accessors
@@ -79,7 +84,7 @@ public class Neuron
 
     public double renderOutput()
     {
-        processInputAlpha();
+        processInputBeta();
         return output >= threshold ? output : 0;
     }
 }
